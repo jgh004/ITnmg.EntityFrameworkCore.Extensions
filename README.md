@@ -1,0 +1,2 @@
+# ITnmg.EntityFrameworkCore.Extensions
+EntityFrameworkCore Extensions
