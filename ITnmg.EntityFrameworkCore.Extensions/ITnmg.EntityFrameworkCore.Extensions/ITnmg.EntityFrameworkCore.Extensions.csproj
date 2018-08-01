@@ -11,6 +11,7 @@
     <PackageTags>ITnmg,EntityFrameworkCore,Extensions,Core,DBContext,Entity</PackageTags>
     <Description>EntityFrameworkCore 的扩展</Description>
     <PackageReleaseNotes>扩展 ModelBuilder，允许实体类与 DBContext 分离，使用 ApplyConfigurationFromAssembly 方法，注册指定程序集中的所有实体类。</PackageReleaseNotes>
+    <PackageIconUrl>https://raw.githubusercontent.com/jgh004/ITnmg.EntityFrameworkCore.Extensions/master/ITnmg.EntityFrameworkCore.Extensions/ITnmg.EntityFrameworkCore.Extensions/logo.png</PackageIconUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
