@@ -19,11 +19,13 @@ namespace Microsoft.EntityFrameworkCore
         /// <exception cref="Microsoft.CSharp.RuntimeBinder.RuntimeBinderException">当程序集中有某个类继承了多个 IEntityTypeConfiguration&lt;TEntity&gt; 接口时引发</exception>
         public static ModelBuilder ApplyConfigurationFromAssembly( this ModelBuilder modelBuild, Assembly assembly )
         {
+            //找到所有实现 IEntityTypeConfiguration<T> 接口的类，排除抽象类和泛型类。
             var configs = assembly.GetExportedTypes()
-                .SelectMany( f => f.GetInterfaces()
-                                , ( t, c ) => c.IsGenericType && c.GetGenericTypeDefinition()
-                                              == typeof( IEntityTypeConfiguration<> ) ? new { ConfigType = t, Arguments = c.GetGenericArguments() } : null
-                           )
+                .SelectMany( f =>
+                {
+                    return f.GetInterfaces().Where( i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof( IEntityTypeConfiguration<> ) );
+                }
+                , ( t, c ) => !t.IsAbstract && !t.IsGenericType ? new { ConfigType = t, Arguments = c.GetGenericArguments() } : null )
                 .Where( f => f != null )
                 .GroupBy( f => f.ConfigType )
                 .Select( f => new { ConfigType = f.Key, Count = f.Count() } );
