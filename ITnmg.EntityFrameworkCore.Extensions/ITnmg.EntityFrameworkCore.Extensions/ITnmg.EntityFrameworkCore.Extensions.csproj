@@ -12,7 +12,7 @@
     <Description>EntityFrameworkCore 的扩展</Description>
     <PackageReleaseNotes>扩展 ModelBuilder.ApplyConfigurationFromAssembly 方法中排除了抽象类和泛型类。</PackageReleaseNotes>
     <PackageIconUrl>https://raw.githubusercontent.com/jgh004/ITnmg.EntityFrameworkCore.Extensions/master/ITnmg.EntityFrameworkCore.Extensions/ITnmg.EntityFrameworkCore.Extensions/logo.png</PackageIconUrl>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
