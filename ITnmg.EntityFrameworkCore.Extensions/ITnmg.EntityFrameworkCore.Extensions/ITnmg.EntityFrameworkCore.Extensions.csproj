@@ -9,10 +9,10 @@
     <RepositoryUrl>https://github.com/jgh004/ITnmg.EntityFrameworkCore.Extensions.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>ITnmg,EntityFrameworkCore,Extensions,Core,DBContext,Entity</PackageTags>
-    <Description>EntityFrameworkCore 的扩展</Description>
-    <PackageReleaseNotes>扩展 ModelBuilder.ApplyConfigurationFromAssembly 方法中排除了抽象类和泛型类。</PackageReleaseNotes>
+    <Description>EntityFrameworkCore 的扩展，通过反射注册实体模型。</Description>
+    <PackageReleaseNotes>EF Core 的扩展，当前功能为 通过反射注册实体模型。</PackageReleaseNotes>
     <PackageIconUrl>https://raw.githubusercontent.com/jgh004/ITnmg.EntityFrameworkCore.Extensions/master/ITnmg.EntityFrameworkCore.Extensions/ITnmg.EntityFrameworkCore.Extensions/logo.png</PackageIconUrl>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
