@@ -11,16 +11,27 @@ Run the following command in the Package Manager Console.
 # Getting Started
 
 ```c#
+public class Order : IEntityTypeConfiguration<Order>
+{
+    public string Id { get; set; }
+
+    public void Configure( EntityTypeBuilder<Order> builder )
+    {
+        base.Configure( builder );
+        builder.Property( m => m.Id ).HasMaxLength( 255 ).IsRequired();
+    }
+}
+
 public class EFContext : DbContext
 {
-  public EFContext( DbContextOptions options ) : base( options )
-  {
-  }
+    public EFContext( DbContextOptions options ) : base( options )
+    {
+    }
 
-  protected override void OnModelCreating( ModelBuilder modelBuilder )
-  {
-    base.OnModelCreating( modelBuilder );
-    modelBuilder.ApplyConfigurationFromAssembly( Assembly.GetExecutingAssembly() );
-  }
+    protected override void OnModelCreating( ModelBuilder modelBuilder )
+    {
+        base.OnModelCreating( modelBuilder );
+        modelBuilder.ApplyConfigurationFromAssembly( Assembly.GetExecutingAssembly() );
+    }
 }
 ```
