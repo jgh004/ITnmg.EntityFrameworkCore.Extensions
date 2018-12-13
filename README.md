@@ -1,3 +1,26 @@
 # ITnmg.EntityFrameworkCore.Extensions
-EntityFrameworkCore Extensions
-EntityFrameworkCore µÄÀ©Õ¹£¬Í¨¹ý·´Éä×¢²áÊµÌåÄ£ÐÍ¡£
+EntityFrameworkCore çš„æ‰©å±•ï¼Œé€šè¿‡åå°„æ³¨å†Œå®žä½“æ¨¡åž‹ã€‚
+
+# Install
+
+Run the following command in the Package Manager Console.  
+åœ¨ nuget åŒ…ç®¡ç†å™¨æŽ§åˆ¶å°è¾“å…¥ä»¥ä¸‹å‘½ä»¤
+
+    PM> Install-Package ITnmg.EntityFrameworkCore.Extensions
+
+# Getting Started
+
+```c#
+    public class EFContext : DbContext
+    {
+      public EFContext( DbContextOptions options ) : base( options )
+      {
+      }
+
+      protected override void OnModelCreating( ModelBuilder modelBuilder )
+      {
+        base.OnModelCreating( modelBuilder );
+        modelBuilder.ApplyConfigurationFromAssembly( Assembly.GetExecutingAssembly() );
+      }
+    }
+```
