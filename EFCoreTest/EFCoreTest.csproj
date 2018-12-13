@@ -23,7 +23,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\ITnmg.EntityFrameworkCore.Extensions\ITnmg.EntityFrameworkCore.Extensions\ITnmg.EntityFrameworkCore.Extensions.csproj" />
+    <ProjectReference Include="..\ITnmg.EntityFrameworkCore.Extensions\ITnmg.EntityFrameworkCore.Extensions.csproj" />
   </ItemGroup>
 
 

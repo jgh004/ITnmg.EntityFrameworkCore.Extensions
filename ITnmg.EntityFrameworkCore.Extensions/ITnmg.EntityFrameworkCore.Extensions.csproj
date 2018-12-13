@@ -10,9 +10,9 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>ITnmg,EntityFrameworkCore,Extensions,Core,DBContext,Entity</PackageTags>
     <Description>EntityFrameworkCore 的扩展，通过反射注册实体模型。</Description>
-    <PackageReleaseNotes>EF Core 的扩展，当前功能为 通过反射注册实体模型。</PackageReleaseNotes>
+    <PackageReleaseNotes>update nuget parkages</PackageReleaseNotes>
     <PackageIconUrl>https://raw.githubusercontent.com/jgh004/ITnmg.EntityFrameworkCore.Extensions/master/ITnmg.EntityFrameworkCore.Extensions/ITnmg.EntityFrameworkCore.Extensions/logo.png</PackageIconUrl>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
