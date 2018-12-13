@@ -11,16 +11,16 @@ Run the following command in the Package Manager Console.
 # Getting Started
 
 ```c#
-    public class EFContext : DbContext
-    {
-      public EFContext( DbContextOptions options ) : base( options )
-      {
-      }
+public class EFContext : DbContext
+{
+  public EFContext( DbContextOptions options ) : base( options )
+  {
+  }
 
-      protected override void OnModelCreating( ModelBuilder modelBuilder )
-      {
-        base.OnModelCreating( modelBuilder );
-        modelBuilder.ApplyConfigurationFromAssembly( Assembly.GetExecutingAssembly() );
-      }
-    }
+  protected override void OnModelCreating( ModelBuilder modelBuilder )
+  {
+    base.OnModelCreating( modelBuilder );
+    modelBuilder.ApplyConfigurationFromAssembly( Assembly.GetExecutingAssembly() );
+  }
+}
 ```
