@@ -9,7 +9,7 @@ Run the following command in the Package Manager Console.
     PM> Install-Package ITnmg.EntityFrameworkCore.Extensions
 
 # Getting Started
-
+    # in the model dll
 ```c#
 public class Order : IEntityTypeConfiguration<Order>
 {
@@ -21,7 +21,9 @@ public class Order : IEntityTypeConfiguration<Order>
         builder.Property( m => m.Id ).HasMaxLength( 255 ).IsRequired();
     }
 }
-
+```
+    # in the context dll
+```c#
 public class EFContext : DbContext
 {
     public EFContext( DbContextOptions options ) : base( options )
