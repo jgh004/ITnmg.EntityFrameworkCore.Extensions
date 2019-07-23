@@ -9,7 +9,7 @@ Run the following command in the Package Manager Console.
     PM> Install-Package ITnmg.EntityFrameworkCore.Extensions
 
 # Getting Started
-    # in the model dll
+## in the model dll
 ```c#
 public class Order : IEntityTypeConfiguration<Order>
 {
@@ -22,7 +22,7 @@ public class Order : IEntityTypeConfiguration<Order>
     }
 }
 ```
-    # in the context dll
+## in the context dll
 ```c#
 public class EFContext : DbContext
 {
